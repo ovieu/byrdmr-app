@@ -8,7 +8,7 @@
       font-size: 1.2rem;
       font-weight: bold;
       text-transform: uppercase;
-      color: var(--color-grey-text);
+      color: var(--color-grey-dark-4);
       writing-mode: tb-rl;
       transform: rotate(-180deg);
       margin-top: 3.2rem;
@@ -24,16 +24,20 @@
       padding-top: 1.6rem;
       padding-left: 3.2rem;
       font-size: 3.4rem;
+      position: relative;
+
+      &--reversed {
+        order: 2;
+        color: white;;
+        padding-left: 3rem;
+      }
     }
 
     .features__text::after {
       border: 1px solid red;
-      position: relative;
       display: block;
-      top: 0;
-      margin-bottom: 2rem;
       content: '';
-      width: 20%;
+      width: 15%;
       height: 0.4rem;
       background-color: var(--color-primary);
     }
@@ -46,6 +50,10 @@
         object-fit: cover;
         width: 100%;
         height: auto;
+      }
+
+      &--reversed {
+        order: 1;
       }
     }
   }
