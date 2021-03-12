@@ -48,9 +48,11 @@ header {
   }
 }
 
+.dark-container{
+  background-color: var(--color-black-2);
+}
 .section-features {
    max-width: 140rem;
   margin: 0 auto;
-  padding: 6.4rem 0;
-  padding-bottom: 12.8rem;
+  padding: 6.4rem 2rem 12.8rem 2rem;
 }
