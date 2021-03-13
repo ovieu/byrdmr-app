@@ -1,0 +1,16 @@
+.data-box {
+  flex: 0 0 30%;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-white-1);
+
+  .data-heading {
+    font-size: 5.2rem;
+    font-weight: 400;
+  }
+
+  .data-subheading {
+    font-size: 1.4rem;
+    color: var(--color-grey-dark-5);
+  }
+}
