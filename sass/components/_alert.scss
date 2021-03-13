@@ -1,0 +1,13 @@
+.alert-box {
+  display: none;
+  background-color: var(--color-alert-sucsess);
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  transition: all .3s;
+
+  .alert-text {
+    color: var(--color-white-1);
+    font-size: 1rem;
+  }
+}

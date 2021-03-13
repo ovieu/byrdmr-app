@@ -27,6 +27,16 @@ function submitForm(e) {
 
   // save the message to firebase
   saveMessage(fullName, email, message);
+
+  // show success alert
+  document.querySelector(".alert-box").style.display = "block";
+
+  setTimeout(function () {
+    document.querySelector(".alert-box").style.display = "none";
+  }, 3000);
+
+  // reset form
+  document.getElementById("contactForm").reset();
 }
 
 function saveMessage(mFullName, mEmail, mMessage) {
