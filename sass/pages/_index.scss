@@ -1,23 +1,5 @@
-.section-features {
-   max-width: 140rem;
-   margin: 0 auto;
-   padding: 6.4rem 2rem 12.8rem 2rem;
-
-  .row {
-    margin-bottom: 3rem;
-  }
-
-  .data-container {
-    max-width: 60rem;
-    margin: 0 auto;
-    padding: 5rem;
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
 .section-form {
-  height: 70vh;
+  height: 50vh;
   background-color: var(--color-secondary);
   display: flex;
   flex-direction: column;
