@@ -112,28 +112,28 @@
     </div>
 
     <div class="section-form">
-        <form action="">
-            <div class="form_group">
+        <form action="" class="form">
+            <div class="form__group">
                 <label for="fullname" class="form__label">full name</label>
-                <input type="text" id="fullname" class="form__input">
+                <input type="text" id="fullname" placeholder="Enter your full name" class="form__input">
             </div>
 
-            <div class="form_group">
+            <div class="form__group">
                 <label for="email" class="form__label">email</label>
-                <input type="email" id="email" class="form__input">
+                <input type="email" id="email" placeholder="Enter your email" class="form__input">
             </div>
 
-            <div class="form_group">
-                <label for="message" class="form__label">email</label>
-                <input type="text" id="message" class="form__message-input">
+            <div class="form__group">
+                <label for="message" class="form__label">message</label>
+                <textarea name="message" id="message" class="form__message-input" placeholder="What are your plans?"></textarea>
             </div>
 
-            <div class="form_group">
+            <div class="form__group">
                 <button class="btn btn--primary">
-                    submit
-                    <span class="btn-icon">
-                        <img src="assets/images/arrow-right2.svg" alt="right arrow">
-                    </span>
+                    Send Message
+                    <svg class="btn__icon">
+                        <use xlink:href="assets/images/sprite.svg#icon-arrow-right2"></use>
+                    </svg>
                 </button>
             </div>
         </form>
