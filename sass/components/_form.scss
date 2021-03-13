@@ -4,6 +4,14 @@
   display: flex;
   flex-direction: column;
 
+  @include respond(tab-land) {
+    width: 75%;
+  }
+
+  @include respond(phone) {
+    width: 85%;
+  }
+
   & > *:not(:last-child) {
     margin-bottom: 3rem;
   }
@@ -46,7 +54,7 @@
 
   &__message-input {
     width: 100%;
-    height: 70%;
+    height: 90%;
     background-color: inherit;
     border: none;
     font: inherit;
