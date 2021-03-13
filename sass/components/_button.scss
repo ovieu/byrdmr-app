@@ -6,8 +6,20 @@
     text-decoration: none;
     padding: 2rem;
     border: 1px solid red;
-    width: 15rem;
     color: var(--color-white-1);
+    font-weight: bold;
+    width: 30%;
+
+    @include respond(tab-land) {
+      //width: 25rem;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
   }
 
   &--primary {
@@ -30,5 +42,10 @@
     height: 1rem;
     margin-left: 0.5rem;
     fill: white;
+
+    @include respond(phone) {
+      width: 3rem;
+      height: 2rem;
+    }
   }
 }
