@@ -13,6 +13,10 @@
       transform: rotate(-180deg);
       margin-top: 3.2rem;
     }
+
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 
   .features-content-box {
@@ -20,9 +24,23 @@
     display: flex;
     justify-content: space-between;
 
+    @include respond(tab-land) {
+      padding: 3rem;
+    }
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .features-details-box {
       width: 45%;
       padding: 2rem;
+
+      @include respond(tab-port) {
+        width: 70%;
+        order: 2;
+      }
 
       &--reversed {
         order: 2;
@@ -58,6 +76,12 @@
 
     .features__image {
       max-width: 45%;
+
+      @include respond(tab-port) {
+        width: 70%;
+        order: 1;
+        margin-bottom: 5rem;
+      }
 
       &-box {
         display: block;
