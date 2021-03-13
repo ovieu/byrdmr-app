@@ -2,14 +2,14 @@ header {
   background-color: var(--color-secondary);
 
   .hero {
-    width: 120rem;
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
 
     &__img {
-      width: 40%;
+      max-width: 40%;
       z-index: 1020;
     }
 
