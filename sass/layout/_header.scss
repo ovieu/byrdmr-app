@@ -9,8 +9,16 @@ header {
     margin: 0 auto;
 
     &__img {
-      max-width: 40%;
+      width: 60%;
       z-index: 1020;
+
+      @include respond(tab-land) {
+        width: 75%;
+      }
+
+      @include respond(phone) {
+        width: 140%;
+      }
     }
 
     &__shadow {
@@ -25,6 +33,21 @@ header {
       font-weight: bold;
       letter-spacing: 1rem;
       margin-top: -10rem;
+
+      @include respond(tab-land) {
+        font-size: 20.5rem;
+        margin-top: -5rem;
+      }
+
+      @include respond(tab-port) {
+        font-size: 16.5rem;
+        margin-top: -5rem;
+      }
+
+      @include respond(small-phone) {
+        font-size: 7.5rem;
+        margin-top: -3rem;
+      }
     }
 
     &__subheading {
@@ -36,6 +59,10 @@ header {
       &-main {
         color: inherit;
         text-transform: uppercase;
+
+        @include respond(tab-port) {
+          font-size: 1.5rem;
+        }
       }
 
       &-quote {
