@@ -8,7 +8,7 @@
     border: 1px solid red;
     color: var(--color-white-1);
     font-weight: bold;
-    width: 30%;
+    width: 40%;
 
     @include respond(tab-land) {
       //width: 25rem;
