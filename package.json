@@ -4,6 +4,16 @@
   "description": "Bryrd Drone Promotional Websie",
   "main": "index.js",
   "scripts": {
+    "//": " --- BUILD (PRODUCTION) --- ",
+    "css:prod": "npm-run-all compile:sass prefix:css compress:css && cp -r css/style.comp.css  dist/css/style.css",
+    "js:prod": "babel main.js | uglifyjs -m -c > dist/main.js",
+    "clean": "rimraf dist",
+    "mkdirs": "mkdir -p dist/assets && mkdir -p dist/css",
+    "copy:assets": "cp -r assets/* dist/assets/",
+    "copy:html": "find . -name '*.html' -type f -exec cp {} dist \\;",
+    "copy": "npm run copy:assets && npm run copy:html",
+    "prebuild:prod": "npm run clean && npm run mkdirs",
+    "build:production": "npm run prebuild:prod && npm run css:prod && npm run js:prod && npm run copy",
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
@@ -16,9 +26,12 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.0.2",
+    "babel-cli": "^6.18.0",
     "concat": "^1.0.3",
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^8.3.0"
+    "postcss-cli": "^8.3.0",
+    "rimraf": "^3.0.2",
+    "uglify-js": "^3.13.1"
   },
   "dependencies": {
     "node-sass": "^5.0.0",
